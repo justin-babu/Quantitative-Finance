@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section{Finite Probability Spaces}
+
+When 3 coins are tossed simultaneously, sample space is $\Omega = \{HHH,HHT,HTH,HTT,THH,THT,TTH,TTT\}$.
+
+Let $P(H)=p$, $P(T)=q$ where $p+q=1$.
+
+Thus, $P(HHH)=P(H)^3 = p^{3}$, since outcomes are independent of each other,.
+
+Similarly, $P(HTH) = (P(H)^2)P(T) = (p^{2})q$ and so on for the others as well.
+
+Define an event $A = \{$1st coin toss is a head$\} = \{HHH,HHT,HTH,HTT\}$.
+
+Therefore $P(A) = P\{HHH\}+P\{HHT\}+P\{HTH\} + P\{HTT\}$
+\[= p^{3} +p^{2}q +p^{2}q+pq^{2}\]
+\[= p^{2}(p+q) + pq(p+q)\]
+\[= p^{2}+pq \]
+\[= p(p+q)=p\]
+
+\subsection*{Probability Space (Finite)}
+
+\textbf{Definition:} A probability space we get by conducting an event having a definite number of outcomes.
+
+Eg – In the experiment of tossing a coin thrice, we had a probability space with only 8 possible outcomes.
+
+Assume a finite sample space denoted by $\Omega =\{\omega_{1}, \omega_{2}, \omega_{3},\ldots\}$.
+
+Now what exactly is a probability space? It has 2 parts:
+
+\begin{enumerate}
+    \item $\Omega \rightarrow$ finite sample space
+    \item $P \rightarrow$ probability measure $\rightarrow$ This is a function that maps every element of $\Omega$ to $[0,1]$ i.e., $P(\omega)=k \in [0,1]$ where $\omega$ denotes a generic element of $\Omega$. Another constraint on $P$ is that 
+    \[\sum_{\omega} P(\omega)=1\]
+\end{enumerate}
+
+We may also want to find the probability of a subset of our sample space, say $A$. Then 
+\[P(A)=\sum_{\omega \in A} P(\omega)\]
+Here we take the sum of probabilities only those $\omega$s that belong to our subset.
+
+The above two equations thus imply that $P(\Omega)=1$.
+
+\textbf{Note:} Probability and random variables are two different things. Later we will talk about two probability measures: a probability measure in the real world ($P$) and another in the risk-neutral world ($P\sim$). As we move between these two worlds, our random variable will remain the same. Only the distribution of the random variable changes. In essence, changing the probability measure doesn't change the random variable.
+
+\end{document}
